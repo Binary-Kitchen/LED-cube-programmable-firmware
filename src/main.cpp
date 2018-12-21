@@ -12,7 +12,7 @@ int main(){
         int dir = 1;
         
         while(true){
-	    _delay_us(500);
+	    _delay_ms(5);
             if(b == 0){
                 dir = 1;
             } else if(b == 0x1F)

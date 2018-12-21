@@ -51,7 +51,7 @@ void cube_4::_start(){
 
     /* setup timer1 */
     TCCR1A = TCCR1B = TCCR1C = 0;
-    OCR1A = 650;
+    OCR1A = 850;
     TIMSK1 |= (1 << OCIE1A);
     TCCR1B |= (1 << WGM12) | (1 << CS10);
     TCNT1 = 0;
