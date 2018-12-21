@@ -55,7 +55,7 @@ MKDIR_P ?= mkdir -p
 
 flash: $(BUILD_DIR)/$(TARGET).hex
 	$(SIZECMD)
-	$(AVRDUDE) -p $(MCU) -P /dev/ttyUSB0 -c arduino -b 57600 -F -u -U flash:w:$^ -U lfuse:w:0xe2:m -U hfuse:w:0xd9:m -U efuse:w:0xff:m 
+	$(AVRDUDE) -p $(MCU) -P /dev/ttyUSB0 -c arduino -b 57600 -F -u -U flash:w:$^
 
 $(BUILD_DIR)/$(TARGET).hex: $(BUILD_DIR)/$(TARGET).elf
 	$(OBJCOPY) -O ihex -R .eeprom $^ $@
